@@ -1,0 +1,56 @@
+<div id="header">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <button mat-icon-button (click)="openNav()" fxShow="true" fxHide.gt-sm style="color:white">
+                <mat-icon>&#9776;</mat-icon>
+            </button>
+            
+            <span class="menu-spacer"></span>
+            <div fxShow="true" fxHide.lt-md>
+                <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+                <a href=""><img src="../../../assets/facebook.png"></a>
+                <a href=""><img src="../../../assets/instagram.png"></a>
+                <a href=""><img src="../../../assets/twitter.png"></a>
+                <a href=""><img src="../../../assets/linkedin.png"></a>
+                <a href=""><img src="../../../assets/github.png"></a>
+                <button type="button" class="btn btn-outline-light btn-md px-5 " id="boton" (click)="login()"
+                    *ngIf="!isLogged">Ingresar</button>
+                <button type="button" class="btn btn-outline-light btn-md px-5 " id="boton" (click)="onLogOut()"
+                    *ngIf="isLogged">Logout</button>
+            </div>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+</div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <div><a href=""><img src="../../../assets/facebook.png" id="redSocial">Facebook</a></div>
+    <div><a href=""><img src="../../../assets/instagram.png" id="redSocial">Instagram</a></div>
+    <div><a href=""><img src="../../../assets/twitter.png" id="redSocial">Twitter</a></div>
+    <div><a href=""><img src="../../../assets/linkedin.png" id="redSocial">Linkedin</a></div>
+    <div><a href=""><img src="../../../assets/github.png" id="redSocial">Github</a></div>
+    <button type="button" class="btn btn-outline-light btn-md px-5 " id="boton_nav" (click)="login()" *ngIf="!isLogged" style="float: left;">Ingresar</button>
+    <button type="button" class="btn btn-outline-light btn-md px-5 " id="boton_nav" (click)="onLogOut()" *ngIf="isLogged" style="float: left;">Logout</button>
+</div>
+<!---
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img src="../../../assets/APLogo-20-20.png" id="logoAP">
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <a href=""><img src="../../../assets/facebook.png"></a>
+            <a href=""><img src="../../../assets/instagram.png"></a>
+            <a href=""><img src="../../../assets/twitter.png"></a>
+            <a href=""><img src="../../../assets/linkedin.png"></a>
+            <a href=""><img src="../../../assets/github.png"></a>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <button type="button" class="btn btn-success" id="boton" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button type="button" class="btn btn-success" id="boton" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
+        </div>
+    </div>
+</div>
+-->

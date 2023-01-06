@@ -1,0 +1,31 @@
+*, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'raleway', 'arial', sans-serif;
+  }
+
+  h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large;
+}
+ 
+h4 {
+    font-size: medium;
+}
+
+.container-fluid{
+    width: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: rgb(148, 148, 148) 1px solid;
+    margin: 0px 10px 0px 10px;
+}
+
+h5 {
+    font: font1;
+}
