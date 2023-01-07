@@ -1,30 +1,30 @@
 {
   "/personas": {
-    "target": "http://localhost:8080",
+    "target": "https://portfolio-374017.rj.r.appspot.com",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"
   },
   "/experiencia": {
-    "target": "http://localhost:8080",
+    "target": "https://portfolio-374017.rj.r.appspot.com",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"
   },
   "/educacion": {
-    "target": "http://localhost:8080",
+    "target": "https://portfolio-374017.rj.r.appspot.com",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"
   },
   "/skill": {
-    "target": "http://localhost:8080",
+    "target": "https://portfolio-374017.rj.r.appspot.com",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"
   },
   "/proyecto": {
-    "target": "http://localhost:8080",
+    "target": "https://portfolio-374017.rj.r.appspot.com",
     "secure": true,
     "changeOrigin": true,
     "logLevel": "debug"

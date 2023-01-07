@@ -27,7 +27,7 @@ export class DatosPersonalesComponent implements OnInit {
   constructor(public personaService: PersonaService, private tokenService: TokenService, public modal:NgbModal,  private router: Router, private activatedRouter: ActivatedRoute, private httpClient: HttpClient, private imgService: ImgService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data; console.log(data)})
+    this.personaService.getPersona().subscribe(data => {this.persona = data})
     if(this.tokenService.getToken()){
       this.isLogged = true;
     } else {
@@ -46,7 +46,6 @@ export class DatosPersonalesComponent implements OnInit {
  
     const id = this.activatedRouter.snapshot.params['id'];
     this.persona.img = this.imgService.url;
-    console.log(this.persona.img);
     //Realizamos la petición a SpringBoot
 
     this.personaService.update(1, this.persona).subscribe(data => {

@@ -7,7 +7,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  expURL = 'http://localhost:8080/skill/';
+  expURL = 'https://portfolio-374017.rj.r.appspot.com/skill/';
 
   constructor(private httpClient: HttpClient) { }
 

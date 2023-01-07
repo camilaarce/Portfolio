@@ -39,7 +39,6 @@ export class ExperienciaComponent implements OnInit {
     this.cargar();
     if(this.tokenService.getToken()){
       this.isLogged = true;
-      console.log(this.experiencia);
     } else {
       this.isLogged = false;
     }
@@ -98,14 +97,12 @@ export class ExperienciaComponent implements OnInit {
     if (opc == 1){
       this.expEditar = this.experiencia[this.indice];
       this.expEditar.img = this.imgService.url;
-      console.log(this.expEditar)
       this.experienciaService.update( this.experiencia[this.indice].id, this.expEditar).subscribe(data => {
           this.cargar();
       });
     } else {
       this.eduEditar = this.educacion[this.indice];
       this.eduEditar.img = this.imgService.url;
-      console.log(this.eduEditar)
       this.educacionService.update( this.educacion[this.indice].id, this.eduEditar).subscribe(data => {
           this.cargar();
       });
@@ -116,12 +113,10 @@ export class ExperienciaComponent implements OnInit {
   create(opc: number): void {
     if(opc == 1){
       const expNueva = new Experiencia(this.empleado, this.empresa, this.periodo, this.descripcion, this.imgService.url)
-      console.log(this.imgService.url)
       this.experienciaService.save(expNueva).subscribe(data => {
           this.cargar();
       });
     } else {
-      console.log(this.imgService.url)
       const eduNueva = new Educacion(this.titulo, this.institucion, this.periodoEdu, this.imgService.url)
       this.educacionService.save(eduNueva).subscribe(data => {
           this.cargar();
@@ -140,9 +135,10 @@ export class ExperienciaComponent implements OnInit {
     //const id = this.activatedRouter.snapshot.params['id'];
     var name: string = null;
     if (opc == 1){
-      name = "experiencia_" + this.empresa;
+      name = "experiencia_" + this.experiencia[this.indice].empresa;
     } else {
-      name = "educacion_" + this.institucion;
+      name = "educacion_" + this.educacion[this.indice].institucion;
+      console.log(name);
     }
     
     this.imgService.uploadImage($event, name)

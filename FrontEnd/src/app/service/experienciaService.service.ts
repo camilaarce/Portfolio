@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  expURL = 'http://localhost:8080/experiencia/';
+  expURL = 'https://portfolio-374017.rj.r.appspot.com/experiencia/';
 
   constructor(private httpClient: HttpClient) { }
 

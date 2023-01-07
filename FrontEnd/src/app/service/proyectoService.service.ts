@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  expURL = 'http://localhost:8080/proyecto/';
+  expURL = 'https://portfolio-374017.rj.r.appspot.com/proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 
